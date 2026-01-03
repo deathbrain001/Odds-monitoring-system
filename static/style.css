@@ -1,0 +1,148 @@
+/* ====== RESET ====== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ====== BODY ====== */
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #0f172a;
+    color: #e5e7eb;
+}
+
+/* ====== HEADER ====== */
+.header {
+    text-align: center;
+    padding: 18px 10px;
+    background: #020617;
+    border-bottom: 1px solid #1e293b;
+}
+
+.header h1 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #f8fafc;
+}
+
+.header p {
+    font-size: 13px;
+    color: #94a3b8;
+    margin-top: 4px;
+}
+
+/* ====== TABS ====== */
+.tabs {
+    display: flex;
+    justify-content: center;
+    background: #020617;
+    border-bottom: 1px solid #1e293b;
+}
+
+.tab-btn {
+    padding: 12px 22px;
+    background: none;
+    border: none;
+    color: #94a3b8;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.tab-btn.active {
+    color: #38bdf8;
+    border-bottom: 2px solid #38bdf8;
+}
+
+.tab-btn:hover {
+    color: #e5e7eb;
+}
+
+/* ====== CONTENT ====== */
+.tab-content {
+    display: none;
+    padding: 12px;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* ====== CARDS GRID ====== */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+}
+
+/* ====== CARD ====== */
+.card {
+    background: #020617;
+    padding: 14px;
+    border-radius: 10px;
+    border-left: 5px solid #334155;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+}
+
+/* ====== STATUS COLORS ====== */
+.card.normal {
+    border-left-color: #22c55e;
+}
+
+.card.watch {
+    border-left-color: #facc15;
+}
+
+.card.alert {
+    border-left-color: #ef4444;
+}
+
+/* ====== CARD CONTENT ====== */
+.match {
+    font-size: 14px;
+    color: #e5e7eb;
+    margin-bottom: 6px;
+}
+
+.odds {
+    font-size: 28px;
+    font-weight: bold;
+    color: #f8fafc;
+}
+
+.change {
+    font-size: 12px;
+    color: #94a3b8;
+    margin-top: 4px;
+}
+
+/* ====== EMPTY / NOTE ====== */
+.empty,
+.note {
+    text-align: center;
+    padding: 20px;
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+/* ====== MOBILE OPTIMIZATION ====== */
+@media (max-width: 600px) {
+    .header h1 {
+        font-size: 18px;
+    }
+
+    .tab-btn {
+        padding: 10px 14px;
+        font-size: 14px;
+    }
+
+    .odds {
+        font-size: 24px;
+    }
+}
