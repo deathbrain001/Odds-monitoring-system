@@ -1,0 +1,56 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: #e5e7eb;
+}
+header {
+    text-align: center;
+    padding: 15px;
+    background: #020617;
+}
+.tabs {
+    display: flex;
+    justify-content: center;
+    background: #020617;
+}
+.tabs button {
+    padding: 10px 20px;
+    background: none;
+    border: none;
+    color: #94a3b8;
+    cursor: pointer;
+    font-size: 16px;
+}
+.tabs button.active {
+    color: #38bdf8;
+    border-bottom: 2px solid #38bdf8;
+}
+.tab { display: none; padding: 10px; }
+.tab.active { display: block; }
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 10px;
+}
+.card {
+    background: #020617;
+    padding: 15px;
+    border-radius: 8px;
+    transition: background 0.3s;
+}
+.card.normal { border-left: 5px solid #22c55e; }
+.card.watch { border-left: 5px solid #facc15; }
+.card.alert { border-left: 5px solid #ef4444; }
+
+.match { font-size: 14px; margin-bottom: 5px; }
+.odds { font-size: 26px; font-weight: bold; }
+.change { font-size: 12px; opacity: 0.8; }
+
+.note, .empty {
+    text-align: center;
+    opacity: 0.7;
+    padding: 20px;
+}
